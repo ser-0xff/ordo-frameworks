@@ -8,7 +8,7 @@ let localPackagesDir = ProcessInfo.processInfo.environment["LOCAL_PACKAGES_DIR"]
 
 func makeBinaryTarget(name: String, checksum: String) -> PackageDescription.Target {
     localPackagesDir.isEmpty
-        ? .binaryTarget(name: name, url: "https://github.com/ser-0xff/ordo-frameworks/blob/main/\(name).xcframework.zip", checksum: checksum)
+        ? .binaryTarget(name: name, url: "https://github.com/ser-0xff/ordo-frameworks/raw/main/\(name).xcframework.zip", checksum: checksum)
         : .binaryTarget(name: name, path: "\(name).xcframework.zip")
 }
 
